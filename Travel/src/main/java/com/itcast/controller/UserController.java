@@ -18,7 +18,8 @@ public class UserController {
     @RequestMapping("findAll")
     public String findAll(Model model){
         List<User> users = userService.findAll();
-        model.addAttribute("users",users );
+        System.out.println(users);
+        model.addAttribute("users",users);
         return "list";
     }
 
